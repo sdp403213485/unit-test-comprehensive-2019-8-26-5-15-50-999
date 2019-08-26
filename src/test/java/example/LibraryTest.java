@@ -53,6 +53,18 @@ class LibraryTest {
 			//then
 			assertEquals("0A4B", result);
 		}
+		
+		@Test
+		void should_return_2A_2B_when_GuessInputCommmand_given_13245() {
+			//given
+			GuessInputCommand guessInputCommand = new GuessInputCommand();
+			String input="13245";
+			String str ="1234";
+			//when
+			String result = Main.output(input,str);
+			//then
+			assertEquals("2A2B", result);
+		}
 	
 //    @BeforeAll
 //    static void initTestEnv() {

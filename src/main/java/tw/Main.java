@@ -25,27 +25,26 @@ public class Main {
 //            System.out.println(input);
         }
     
-    
-	public static String output(String input,String str) {
-		if(input.equals(str)) {
-			return "right";
-		}
-		else {
-			int A=0;
-			int B=0;
-			char [] stringInput = input.toCharArray();
-			char [] stringStr = str.toCharArray();
-			for(int i=0;i<4;i++) {
-				for(int j=0;j<4;j++) {
-					if(stringInput[i]==stringStr[j] && i==j) {
-						A=A+1;
-					}else if(stringInput[i]==stringStr[j] && i!=j) {
-						B=B+1;
-					}
-				}
-			}
-			return A+"A"+B+"B";
-		}
+    public static String output(String input,String str) {
+    	if(input.equals(str)) {
+    		return "right";
+    	}
+    	else {
+    		int A=0;
+    		int B=0;
+    		char [] stringInput = input.toCharArray();
+    		char [] stringStr = str.toCharArray();
+    		for(int i=0;i<4;i++) {
+    			for(int j=0;j<4;j++) {
+    				if(stringInput[i]==stringStr[j] && i==j) {
+    					A=A+1;
+    				}else if(stringInput[i]==stringStr[j] && i!=j) {
+    					B=B+1;
+    				}
+    			}
+    		}
+    		return A+"A"+B+"B";
+    	}
     }
 }
     

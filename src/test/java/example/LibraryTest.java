@@ -22,14 +22,25 @@ class LibraryTest {
 	void should_return_1A_0B_when_GuessInputCommmand_given_1567() {
 		//given
 		GuessInputCommand guessInputCommand = new GuessInputCommand();
-		String input="1234";
-		String str ="1567";
+		String input="1567";
+		String str ="1234";
 		//when
 		String result = Main.output(input,str);
 		//then
 		assertEquals("1A0B", result);
 	}
 	
+		@Test
+		void should_return_right_when_GuessInputCommmand_given_1234() {
+			//given
+			GuessInputCommand guessInputCommand = new GuessInputCommand();
+			String input="1234";
+			String str ="1234";
+			//when
+			String result = Main.output(input,str);
+			//then
+			assertEquals("right", result);
+		}
 	
 //    @BeforeAll
 //    static void initTestEnv() {

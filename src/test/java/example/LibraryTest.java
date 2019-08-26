@@ -41,6 +41,18 @@ class LibraryTest {
 			//then
 			assertEquals("right", result);
 		}
+		
+		@Test
+		void should_return_0A_4B_when_GuessInputCommmand_given_4321() {
+			//given
+			GuessInputCommand guessInputCommand = new GuessInputCommand();
+			String input="4321";
+			String str ="1234";
+			//when
+			String result = Main.output(input,str);
+			//then
+			assertEquals("0A4B", result);
+		}
 	
 //    @BeforeAll
 //    static void initTestEnv() {
